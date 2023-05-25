@@ -1,6 +1,6 @@
 name: 'RPM Build'
 description: 'Build RPMs from spec file and upload it as Artifact or Release Asset'
-author: 'Naveenraj M'
+author: 'Benoit Petit'
 
 inputs: 
   spec_file:
@@ -30,5 +30,3 @@ runs:
 branding:
   icon: 'package'
   color: 'red'
-
-  
