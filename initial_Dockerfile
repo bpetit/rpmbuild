@@ -1,10 +1,11 @@
-FROM registry.access.redhat.com/ubi9/ubi:latest
+FROM registry.access.redhat.com/ubi8/ubi:latest
 
+WORKDIR /usr/lib
 # Copying all contents of rpmbuild repo inside container
 COPY . .
 
-RUN dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
-RUN dnf install -y https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/rpmdevtools-9.5-1.el9.noarch.rpm
+RUN dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+RUN dnf install -y https://vault.centos.org/centos/8/AppStream/x86_64/os/Packages/rpmdevtools-8.10-8.el8.noarch.rpm
 
 # Installing tools needed for rpmbuild , 
 # depends on BuildRequires field in specfile, (TODO: take as input & install)

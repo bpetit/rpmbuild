@@ -1,4 +1,4 @@
-FROM bpetit/rpmbuild:latest
+FROM bpetit/rpmbuild:rhel8
 
 # Copying all contents of rpmbuild repo inside container
 COPY . .
