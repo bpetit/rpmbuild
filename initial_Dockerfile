@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi:latest
 
-WORKDIR /usr/lib
+WORKDIR /lib
 # Copying all contents of rpmbuild repo inside container
 COPY . .
 
